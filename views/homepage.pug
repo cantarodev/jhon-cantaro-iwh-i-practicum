@@ -1,0 +1,25 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .container
+            h1 Pet Directory
+            
+            //- Enlace obligatorio
+            a(href="/update-cobj") Add to this table
+            
+            table
+                thead
+                    tr
+                        th Name
+                        th Description
+                        th Age
+                tbody
+                    each pet in records
+                        tr
+                            td= pet.properties.name
+                            td= pet.properties.description
+                            td= pet.properties.age

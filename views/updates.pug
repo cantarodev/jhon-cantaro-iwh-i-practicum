@@ -1,0 +1,24 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .form-wrapper
+            h1 Add New Pet
+            //- Enlace obligatorio para volver al inicio
+            a(href="/") Return to the homepage
+            
+            //- El formulario apuntará a la ruta POST que crearemos después
+            form(action="/update-cobj" method="POST")
+                label(for="name") Name:
+                input(type="text" name="name" required)
+
+                label(for="description") Description:
+                input(type="text" name="description" required)
+
+                label(for="age") Age:
+                input(type="text" name="age" required)
+
+                button(type="submit") Create Pet
